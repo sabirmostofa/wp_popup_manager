@@ -1,10 +1,66 @@
 
-#popup_background{
-    position:absolute;
+#popup_back{
+    position:fixed;
+    top:0;
+    left:0;
     width:100%;
-        height:100%;
-        background-color: black;
-        opacity:0.7;
+    height:100%;
+    background-color: black;
+    opacity:0.7;
+    z-index:98;
+    display: none;
+
 }
 
+#popup_div{
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:450px;
+    height: 350px;
+    z-index:99;
+    background-color:white;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#popup_close{
+    border:1px solid gray;
+    float:right;
+    margint:3px 3px 0 0;
+    padding:0px 3px;
+    cursor:pointer;
+    line-height: 14px;
+
+}
+
+#popup_logo{
+    width:150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#popup_logo img{
+    width: 120px;
+    height: 120px;
+}
+#popup_ad {
+    width: 100px;
+    height: 40px;
+    margin:0 auto;
+}
+#popup_ad img{
+    width: 88px;
+    height: 31px;
+}
+
+.clear{
+    clear:both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
 

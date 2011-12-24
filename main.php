@@ -56,8 +56,35 @@ class wpPopupTools {
     
     //adding poupt
     
-    function add_popup($content){
+    function add_popup($content){ 
+        global $post;
+        if(!get_post_meta($post->ID, 'popup_checkbox', true))return $content;        
+       $info_array = array('popup_logo', 'popup_category', 'popup_rating', 'popup_info', 'popup_ad_image_link', 'popup_ad_image_target');
+      
+       foreach ($info_array as $single) {
+            if ($val = get_post_meta($post->ID, $single, true))
+                $$single = $val;
+            else
+                $$single = '';
+        }
         
+        $xtra=<<<ST
+        <div id="popup_back">
+            
+            </div>
+            <div id="popup_div">
+            <div id="popup_close">
+            X
+            </div>
+            <div class="clear"></div>
+            <div id="popup_logo"><img src="$popup_logo"> </div>
+                <div id="popup_category">Rank:$popup_category</div>
+                <div id="popup_rating">Rating:$popup_rating</div>
+                <div id="popup_info">$popup_info</div>
+                <div id="popup_ad"><a href="$popup_ad_image_target"><img src="$popup_ad_image_link"/></a></div>
+            </div>
+ST;
+        $content.=$xtra;
         return $content;
     }
 
