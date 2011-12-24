@@ -3,9 +3,14 @@ jQuery(document).ready(function($){
  
      
     function wp_popup_div(){
-    
+    if(document.documentElement){
     var windowWidth = document.documentElement.clientWidth;  
     var windowHeight = document.documentElement.clientHeight;  
+    }else if(document.body){
+        var windowWidth = document.body.clientWidth;  
+       var windowHeight = document.body.clientHeight;   
+        
+    }
     var popupHeight = $("#popup_div").height();  
     var popupWidth = $("#popup_div").width();
     var topPos= windowHeight/2-popupHeight/2;

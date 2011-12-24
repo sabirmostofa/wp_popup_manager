@@ -78,10 +78,11 @@ class wpPopupTools {
             </div>
             <div class="clear"></div>
             <div id="popup_logo"><img src="$popup_logo"> </div>
-                <div id="popup_category">Rank:$popup_category</div>
-                <div id="popup_rating">Rating:$popup_rating</div>
-                <div id="popup_info">$popup_info</div>
-                <div id="popup_ad"><a href="$popup_ad_image_target"><img src="$popup_ad_image_link"/></a></div>
+                <div id="popup_category" class="popup_spacer"><b>Category: </b> $popup_category</div>
+                <div id="popup_rating" class="popup_spacer"><b>Rating:</b> $popup_rating</div>
+                <div id="popup_info" >$popup_info</div>
+        <div class="clear"></div>
+                <div id="popup_ad" ><a href="$popup_ad_image_target" target="_blank"><img src="$popup_ad_image_link"/></a></div>
             </div>
 ST;
         $content.=$xtra;

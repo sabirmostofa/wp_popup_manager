@@ -23,6 +23,12 @@
     background-color:white;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    
+    font: 15px verdana;
+    padding:5px;
+     line-height: 20px;
+   color:black;
+   border:8px solid black;
 }
 
 #popup_close{
@@ -31,28 +37,43 @@
     margint:3px 3px 0 0;
     padding:0px 3px;
     cursor:pointer;
-    line-height: 14px;
+   
 
 }
 
 #popup_logo{
-    width:150px;
-    height: 150px;
+    width:120px;
+    height: 120px;
     margin: 0 auto;
 }
 
 #popup_logo img{
     width: 120px;
     height: 120px;
+    margin:0;
+}
+
+#popup_category{
+    font-size:16px;
 }
 #popup_ad {
+ 
     width: 100px;
     height: 40px;
-    margin:0 auto;
+    margin:10px auto;
 }
 #popup_ad img{
     width: 88px;
     height: 31px;
+   margin:0;
+}
+
+#popup_info{
+    min-height: 100x;
+    max-height: 120px;
+    padding: 10px;
+    
+
 }
 
 .clear{
@@ -62,5 +83,10 @@
     visibility: hidden;
     width: 0;
     height: 0;
+}
+
+.popup_spacer{
+    margin-left: 150px;
+    margin-top: 5px;
 }
 
